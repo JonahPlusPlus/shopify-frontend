@@ -1,0 +1,11 @@
+{
+  "name": "shopify-frontend",
+  "description": "A simple webapp for Shopify's frontend challenge",
+  "keywords": [
+    "shopify",
+    "go",
+    "frontend"
+  ],
+  "website": "http://github.com/JonahPlusPlus/shopify-frontend",
+  "repository": "http://github.com/JonahPlusPlus/shopify-frontend"
+}
