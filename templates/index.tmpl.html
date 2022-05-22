@@ -1,8 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
   {{template "header.tmpl.html"}}
-<body>
-  {{template "nav.tmpl.html"}}
-
-
-</body>
+  <body>
+    <header>
+      <img id="icon" src="static/icon.png"/>
+      <h3 id="title">Open AI Chat</h3>
+      <input id="temp" type="range" min="0" max="10" value="5" />
+    </header>
+    <main id="conversation">
+    </main>
+    <footer>  
+      <button id="submit-btn" type="submit">▶</button>
+      <textarea id="prompt" readonly="readonly">?></textarea><textarea id="stdin" type="text" placeholder="<Enter> or ▶ to process.
+<Shift+Enter> for new line." rows="2"></textarea>
+    </footer>
+    <script type="text/javascript" src="static/main.js" ></script>
+  </body>
 </html>
