@@ -29,9 +29,10 @@ When a user reaches the end of a line, it automatically resize to give them more
 
 ## Technical
 
-Giving the AI really old context (previous messages) can ruin the context of future messages. Instead, the AI is given a small prompt explaining the basic premise (an AI assistant replying politely to messages) and the last message exchange between the user and AI. This way, the AI has decent context for a small chain of messages, but older messages lose relevancy.
+Giving the AI really old context (previous messages) can ruin the context of future messages. Instead, the AI is given a small prompt explaining the basic premise (an AI assistant replying politely to messages) and the last message exchange between the user and AI. This way, the AI has decent context for a small chain of messages, but older messages lose relevancy. The frequency and presence penalities have been set to high values, since asking the same question multiple times in a row can cause the AI to repeat itself.
 
 The temperature slider is useful when trying to get more randomized results (i.e. "Give me a list of random numbers"), where predictability is undesirable.
+By default, it is set to 10 (100%), as an attempt to get less repetitive results.
 
 The backend was written in Go, since I see a lot of Go projects on Shopify's GitHub repository (I am applying for a Backend position as well). Heroku's Go template used Gin, so I stuck with that. I used the backend as a reverse proxy for calls to the Open AI API (just pass the secret into the Authorization header).
 

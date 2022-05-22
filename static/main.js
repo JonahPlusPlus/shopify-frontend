@@ -29,7 +29,7 @@ function queryAI() {
         return; // Make sure there is input
     }
 
-    var conversation = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n";
+    var conversation = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly. The assistant does not repeat itself.\n";
 
     if (prev_human_msg.trim().length != 0 && ai_response.trim().length != 0) {
         conversation += "Human: "+prev_human_msg+"\nAI: "+ai_response+"\n";
@@ -51,12 +51,12 @@ function queryAI() {
     fetch("/query", {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify({ prompt: conversation, temperature: $("#temp").val()/10.0, max_tokens: 120, frequency_penalty: 0.5, presence_penalty: 0.2, stop: ["Human:", "Human"] }),
+        body: JSON.stringify({ prompt: conversation, temperature: $("#temp").val()/10.0, max_tokens: 120, frequency_penalty: 1.0, presence_penalty: 1.5, stop: ["Human:"] }),
         mode: "no-cors"
     }).then(function(response){
         return response.json();
     }).then(function(data){
-        ai_response = data.choices[0].text;
+        ai_response = data.choices[0].text.trim();
         
         var ai_message = $("<div>").text(ai_response).addClass("ai");
 
