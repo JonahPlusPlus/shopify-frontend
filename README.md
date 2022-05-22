@@ -3,6 +3,8 @@
 
 A simple AI assistant chat room for Shopify's frontend challenge
 
+![The AI assistant can hold a conversation](OpenAIChat.png "A small conversation between the AI and me")
+
 ## Layout
 
 Fully responsive, though not recommended for displays smaller than 400x300.
