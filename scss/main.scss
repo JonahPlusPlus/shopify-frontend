@@ -43,6 +43,7 @@ html {
     width: 100%;
     
     margin: 0;
+    background-color: $background;
 
     overflow: none;
 }
@@ -60,6 +61,10 @@ body {
     overflow: none;
 
     background-color: $background;
+    opacity: 1;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(45deg, $midground 0, $midground 1px, $background 0, $background 50%);
+
     color: $font-color;
 
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
