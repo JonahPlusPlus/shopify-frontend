@@ -35,6 +35,17 @@ The temperature slider is useful when trying to get more randomized results (i.e
 
 The backend was written in Go, since I see a lot of Go projects on Shopify's GitHub repository (I am applying for a Backend position as well). Heroku's Go template used Gin, so I stuck with that. I used the backend as a reverse proxy for calls to the Open AI API (just pass the secret into the Authorization header).
 
+## Running on Local
+
+Needs the Heroku CLI to run locally.
+
+Create a local `.env` file with `REPEAT=10` and `OPENAI_SECRET=your_api_key`
+
+In the `Procfile`, change the path to `bin\shopify-frontend.exe` if on Windows.
+
+Run with `heroku local web`
+
 ## TODO
+
 * Resizing the window doesn't update the height of the message prompt (i.e. 4 lines of text will stay at 4 lines even though only 2 lines are used)
 * Perhaps experiment if the AI can be used to generate the temperature for a question (depends on if the AI understands what temperature in this context means)
