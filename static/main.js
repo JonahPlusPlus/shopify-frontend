@@ -29,7 +29,7 @@ function queryAI() {
         return; // Make sure there is input
     }
 
-    var conversation = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly. The assistant does not repeat itself.\n";
+    var conversation = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n";
 
     if (prev_human_msg.trim().length != 0 && ai_response.trim().length != 0) {
         conversation += "Human: "+prev_human_msg+"\nAI: "+ai_response+"\n";
