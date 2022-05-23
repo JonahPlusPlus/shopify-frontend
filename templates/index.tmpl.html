@@ -5,12 +5,11 @@
     <header>
       <img id="icon" src="static/icon.png"/>
       <h3 id="title">Open AI Chat</h3>
-      <input id="temp" type="range" min="0" max="10" value="10" />
+      <input id="temp" type="range" min="0" max="10" value="10" title="AI Predictability Temperature"/>
     </header>
-    <main id="conversation">
-    </main>
+    <main id="conversation"></main>
     <footer>  
-      <button id="submit-btn" type="submit">▶</button>
+      <button id="submit-btn" type="submit" title="Send">▶</button>
       <textarea id="prompt" readonly="readonly">?></textarea><textarea id="stdin" type="text" placeholder="<Enter> or ▶ to process.
 <Shift+Enter> for new line." rows="2"></textarea>
     </footer>

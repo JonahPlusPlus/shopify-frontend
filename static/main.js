@@ -51,7 +51,7 @@ function queryAI() {
     fetch("/query", {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify({ prompt: conversation, temperature: $("#temp").val()/10.0, max_tokens: 120, frequency_penalty: 1.0, presence_penalty: 1.5, stop: ["Human:"] }),
+        body: JSON.stringify({ prompt: conversation, temperature: $("#temp").val()/10.0, max_tokens: 120, frequency_penalty: 0.5, presence_penalty: 0.5, stop: ["Human:"] }),
         mode: "no-cors"
     }).then(function(response){
         return response.json();

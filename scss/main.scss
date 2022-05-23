@@ -1,6 +1,6 @@
 $background: #0A0A0F;
 $midground: #0F0F19;
-$foreground: #231E28;
+$foreground: #1D1D2D;
 $font-color: #FFF;
 $green: #37F014;
 
@@ -225,6 +225,22 @@ body {
         padding: .5em;
 
         overflow-y: scroll;
+
+        &:empty::before{
+            content: "Try saying hello or asking a question!\ai.e. What's up?";
+            white-space: pre;
+            text-align: center;
+            word-break: break-all;
+            color: $foreground;
+            font-weight: bold;
+            background-color: $background;
+            opacity: 1;
+            background-size: 10px 10px;
+            background-image: repeating-linear-gradient(45deg, $midground 0, $midground 1px, $background 0, $background 50%);
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: $border-radius;
+        }
 
         // Scrollbar
         @include scrollbar();
