@@ -17,6 +17,13 @@ The footer is where the message prompt is.
 Users can press `Enter` or the `Play` button to send a message, or press `Shift+Enter` to add a newline.
 When a user reaches the end of a line, it automatically resize to give them more space (until a certain point, at which it allows for scrolling).
 
+The prompt says to store the results in a list from newest to oldest. I put the messages on the bottom, but move the page to the bottom after every result. I hope this is fine.
+
+## Extra Features
+
+* Locally-Stored Messages (a cookie stores all messages and they are loaded when the page loads)
+* Thermometer (for controlling the AI's predictability)
+
 ## Dependencies
 
 * Heroku, for hosting

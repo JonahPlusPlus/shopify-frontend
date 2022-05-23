@@ -1,4 +1,6 @@
 window.onload = function() {
+    $("#conversation").html(document.cookie);
+
     $("#stdin").on("keydown", function(e) {
         $("footer").first().css("height", "");
         $("footer").first().css("height", ($("#stdin")[0].scrollHeight) + "px");
@@ -61,6 +63,8 @@ function queryAI() {
         var ai_message = $("<div>").text(ai_response).addClass("ai");
 
         $("#conversation").append(ai_message);
+
+        document.cookie = $("#conversation").html();
 
         $("#conversation").scrollTop($('#conversation')[0].scrollHeight);
     });
